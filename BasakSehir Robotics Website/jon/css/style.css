@@ -419,8 +419,9 @@ ul.btn li:last-child {
      display: flex;
      justify-content: center;
      align-items: center;
-     background-color: #000;
+     background-color: transparent;
  }
+ 
  .Banner_Background
  {
      position: absolute;
