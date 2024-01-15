@@ -37,6 +37,7 @@ html {
 }
 
 body {
+     background-color: #242272;
      color: #666666;
      font-size: 14px;
      font-family: 'Lato', sans-serif;
@@ -152,9 +153,11 @@ a,
 
 img {
      max-width: 100%;
-     height: auto;
 }
-
+figure
+{
+     height: 100%;
+}
  :focus {
      outline: 0;
 }
@@ -312,6 +315,7 @@ ul.btn li:last-child {
 /*-- navigation--*/
 
 .navigation.navbar {
+    
      float: right;
      padding-top: 15px !important;
      padding: 0;
@@ -327,14 +331,14 @@ ul.btn li:last-child {
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
 .navigation.navbar-dark .navbar-nav .nav-link:hover {
-     color: #a75d20;
+     color: rgb(146, 83, 41);
 }
 
 .navigation.navbar-dark .navbar-nav .active>.nav-link,
 .navigation.navbar-dark .navbar-nav .nav-link.active,
 .navigation.navbar-dark .navbar-nav .nav-link.show,
 .navigation.navbar-dark .navbar-nav .show>.nav-link {
-     color: rgb(228, 109, 30);
+     color: rgb(233, 103, 17);
 }
 
 .navbar-expand-md .navbar-nav {
@@ -352,33 +356,42 @@ ul.btn li:last-child {
 .get_btn a {
      display: inline-block;
      padding: 8px 39px;
-     color: #fff;
+     color: #000000;
      font-size: 16px;
-     background-color: rgb(228, 109, 30);
+     background-color: rgb(233, 103, 17);
      text-transform: uppercase;
      margin-top: -10px;
      margin-left: 30px;
 }
 
 .get_btn a:hover {
-     color: #686565;
-     background-color:  #a75d20;
+     color: #ffffff;
+     background-color:  rgb(146, 83, 41);
 }
 
 .header {
+     position: fixed;
+     z-index: 999;
+     top: 0;
      width: 100%;
      padding: 30px 30px;
-     border-bottom: #c6cad5 solid 12px;
-     background-color: #13110e;
+     border-bottom: #ff5e00 solid 12px;
+     background-color: #0d0047;
 }
-
+.full
+{
+     height: 100%;
+}
+.center-desk
+{
+     height: 100%;
+}
 .logo {
      position: relative;
-     padding-left: 50%;
-     padding-top: 6px;
+     height: 100%;
 }
 
-.logo::after {
+/* .logo::after {
      position: absolute;
      content: "";
      width: 136px;
@@ -386,32 +399,71 @@ ul.btn li:last-child {
      left: -45px;
      top: -30px;
      background: url(../images/top_head.png);
+     z-index: 1;
      background-repeat: no-repeat;
      border-right: #c6cad5 solid 15px;
+} */
+.Logo_Img
+{
+     height: 200%;
+    left: 0;
+    top: 30px;
+    position: absolute;
 }
-
-
 /** banner section **/
 
 .banner_main {
-     background: url(../images/frcImages/Headerimage.jpg);
-     background-repeat: no-repeat;
-     background-size: contain;
      min-height: 840px;
-     background-size: 100% 100%;
+     position: relative;
      display: flex;
      justify-content: center;
-     align-content: center;
      align-items: center;
-}
-
+     background-color: #000;
+ }
+ .Banner_Background
+ {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     z-index:0;
+     animation: banner_main_opacity 8s ease-in-out 0.01s infinite both, banner_main_background 16s ease-in-out 0s infinite both;
+ }
+ /* Opacity Animation */
+ @keyframes banner_main_opacity {
+     0%, 100% {
+         opacity: 1;
+         filter: blur(0px);
+        
+     }
+     50% {
+         opacity: 0.2;
+         filter: blur(10px);
+     }
+ }
+ 
+ /* Background Change Animation */
+ @keyframes banner_main_background {
+     0%, 100% {
+         background: url(../images/frcImages/HeaderImage.jpg) no-repeat center center;
+         background-size: 100% 100%;
+         
+     }
+     50%{
+         background: url(../images/frcImages/FRCBACKGROUND.png) no-repeat center center;
+         background-size: 100% 100%;
+     }
+ }
 .text-bg {
      text-align: center;
 }
 
 .text-bg h1 {
      text-transform: uppercase;
-     color: #fff;
+     /* BU kısım textin sağdan sola doğru gradient bir geçiş yapmasına sağlıyor */
+     background: linear-gradient(to right, #f39821, #0400ff); 
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text; 
+     /*  */
      font-size: 110px;
      line-height: 120px;
      padding-bottom: 15px;
@@ -420,7 +472,11 @@ ul.btn li:last-child {
 
 .text-bg p {
      font-size: 17px;
-     color: #fff;
+     /* BU kısım textin sağdan sola doğru gradient bir geçiş yapmasına sağlıyor */
+     background: linear-gradient(to right, #f39821, #0400ff); 
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text; 
+     /*  */
      line-height: 28px;
      font-weight: 500;
      padding-bottom: 50px;
@@ -438,13 +494,13 @@ ul.btn li:last-child {
      text-align: center;
      display: inline-block;
      border-radius: 30px;
-     border: #f4cb1e solid 4px;
+     border: rgb(233, 103, 17) solid 4px;
      transition: ease-in all 0.5s;
 }
 
 .text-bg a:hover {
-     background-color: #13110e;
-     color: #fff;
+     background-color: #ffffff;
+     color: #000000;
      transition: ease-in all 0.5s;
 }
 
@@ -503,6 +559,7 @@ ul.btn li:last-child {
 }
 
 .box_text {
+     height: 100%;
      box-shadow: 0 0 95px rgba(13, 3, 3, 0.56);
 }
 
@@ -511,7 +568,10 @@ ul.btn li:last-child {
 }
 
 .box_text figure img {
+     height: 100%;
      width: 100%;
+     border : 1px solid rgb(233, 103, 17);;
+     border-radius: 10px;
 }
 
 
@@ -536,7 +596,8 @@ ul.btn li:last-child {
 
 .hottest .hottest_box {
      position: relative;
-     background-color: #f4cb1e;
+     background-color: rgb(255 135 55);
+     border-radius: 10px;
      padding: 60px 40px;
 }
 
@@ -555,8 +616,8 @@ ul.btn li:last-child {
 }
 
 .hottest .hottest_box p {
-     color: #fff;
-     font-size: 17px;
+     color: black;
+     font-size: 20px;
      line-height: 32px;
      font-weight: 500;
 }
@@ -605,10 +666,11 @@ ul.btn li:last-child {
 }
 
 .choose_img {
-     background-color: #fff;
-     padding: 20px;
-     margin-left: 30px;
-     margin-right: 40px;
+     background-color: #804018;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 40px;
+    border-radius: 20px;
 }
 
 .choose_img figure {
@@ -618,6 +680,7 @@ ul.btn li:last-child {
 
 .choose_img figure img {
      width: 100%;
+     border-radius: 20px;
 }
 
 .padding_with {
@@ -636,7 +699,7 @@ ul.btn li:last-child {
 
 .choose_box i img {
      float: left;
-     background-color: #f4cb1e;
+     background-color: #804018;
      width: 140px;
      padding: 10px;
      border-radius: 60px;
