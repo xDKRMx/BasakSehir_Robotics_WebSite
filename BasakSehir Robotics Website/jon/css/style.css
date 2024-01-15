@@ -37,7 +37,8 @@ html {
 }
 
 body {
-     background-color: #242272;
+     background: url(../images/Background.jpg) no-repeat no-repeat center center ;
+     background-size: 100% 100%;
      color: #666666;
      font-size: 14px;
      font-family: 'Lato', sans-serif;
@@ -376,7 +377,7 @@ ul.btn li:last-child {
      width: 100%;
      padding: 30px 30px;
      border-bottom: #ff5e00 solid 12px;
-     background-color: #0d0047;
+     background-color:#001d3f;
 }
 .full
 {
@@ -460,7 +461,7 @@ ul.btn li:last-child {
 .text-bg h1 {
      text-transform: uppercase;
      /* BU kısım textin sağdan sola doğru gradient bir geçiş yapmasına sağlıyor */
-     background: linear-gradient(to right, #f39821, #0400ff); 
+     background: linear-gradient(to right, #ff6800, #001aff);
      -webkit-text-fill-color: transparent;
      -webkit-background-clip: text; 
      /*  */
@@ -473,9 +474,10 @@ ul.btn li:last-child {
 .text-bg p {
      font-size: 17px;
      /* BU kısım textin sağdan sola doğru gradient bir geçiş yapmasına sağlıyor */
-     background: linear-gradient(to right, #f39821, #0400ff); 
+      background: linear-gradient(to right, #ff6800, #001aff);
      -webkit-text-fill-color: transparent;
-     -webkit-background-clip: text; 
+     -webkit-background-clip: text;  
+     
      /*  */
      line-height: 28px;
      font-weight: 500;
@@ -499,8 +501,8 @@ ul.btn li:last-child {
 }
 
 .text-bg a:hover {
-     background-color: #ffffff;
-     color: #000000;
+     background-color: #0e1768;
+     color: rgb(233, 103, 17);
      transition: ease-in all 0.5s;
 }
 
@@ -581,7 +583,6 @@ ul.btn li:last-child {
 /** hottest section **/
 
 .hottest {
-     background: #fff;
      padding: 90px 0 0px 0;
 }
 
@@ -591,7 +592,10 @@ ul.btn li:last-child {
 }
 
 .hottest .titlepage h2 {
-     color: #000;
+     /* background: radial-gradient(#001aff,#ff6800);
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text; */
+     color: white;
 }
 
 .hottest .hottest_box {
@@ -630,7 +634,7 @@ ul.btn li:last-child {
 
 .choose {
      margin-top: 90px;
-     background-color: #242323;
+     /* background-color: #242323; */
      padding: 90px 0 190px 0;
      position: relative;
 }
@@ -642,7 +646,7 @@ ul.btn li:last-child {
      left: 0px;
      width: 100%;
      height: 195px;
-     background: url(../images/choose_bottom_cross.png);
+     /* background: url(../images/choose_bottom_cross.png); */
      background-repeat: no-repeat;
      display: block;
      background-position: center center;
