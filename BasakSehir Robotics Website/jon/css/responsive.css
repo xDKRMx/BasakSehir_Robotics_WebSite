@@ -243,6 +243,14 @@
         margin-top: 30px;
         margin-bottom: 30px;
     }
+    .Choose_Icon
+    {
+        width: 20%;
+    }
+    .Choose_Paragragh
+    {
+     margin-left: 30px;
+    }
     .padding_left0 {
         padding-left: 15px;
     }

@@ -511,13 +511,13 @@ ul.btn li:last-child {
 /** end banner section **/
 
 .titlepage {
+     color: white;
      text-align: center;
      padding-bottom: 60px;
 }
 
 .titlepage h2 {
      font-size: 50px;
-     color: #090807;
      line-height: 62px;
      font-weight: bold;
      padding: 0;
@@ -535,7 +535,7 @@ ul.btn li:last-child {
 
 .read_more {
      font-size: 17px;
-     background-color: #f4cb1e;
+     background-color: #ff6100;
      color: #fff;
      padding: 13px 0px;
      width: 100%;
@@ -671,7 +671,7 @@ ul.btn li:last-child {
 }
 
 .choose_img {
-     background-color: #804018;
+     background-color: #ff6100;
     padding: 20px;
     margin-left: 30px;
     margin-right: 40px;
@@ -704,7 +704,7 @@ ul.btn li:last-child {
 
 .choose_box i img {
      float: left;
-     background-color: #804018;
+     background-color: #ff6100;
      width: 140px;
      padding: 10px;
      border-radius: 60px;
@@ -714,7 +714,10 @@ ul.btn li:last-child {
      float: right;
      padding-left: 20px;
 }
-
+.Choose_Paragragh
+{
+     padding: 0;
+}
 .choose_text h3 {
      color: #fff;
      font-size: 20px;
@@ -730,35 +733,49 @@ ul.btn li:last-child {
 }
 
 .padding_bottom {
-     padding-bottom: 30px;
+     padding: 20px;
+     
+}
+.padding_bottom_Div
+{
+  margin-left: 30px;
 }
 
+.padding_bottom_Div p, .padding_bottom_Div h3{
+     color: #fff;
+}
+.padding_bottom_Div p{
+     font-size: 15px;
+}
 
 /** end choose  section **/
 
 
 /** product  section **/
-
-.product_box {
+.Project h2{
+     color: white;
+}
+.Social_Project {
      position: relative;
      margin-bottom: 30px;
      box-shadow: 0 0 51px rgba(13, 3, 3, 0.13);
+     animation: Shadow_Effect 4s ease-in-out 0.5s infinite both;
 }
 
-.product_box figure {
+.Social_Project figure {
      margin: 0;
 }
 
-.product_box figure img {
+.Social_Project figure img {
      width: 100%;
      height: 343px;
 }
 
-.product_box h3 {
+.Social_Project h3 {
      position: absolute;
      bottom: 15px;
+     left: 5px;
      padding: 0;
-     right: 50px;
      text-align: right;
      color: #fff;
      font-size: 30px;
@@ -768,6 +785,22 @@ ul.btn li:last-child {
 
 .black {
      color: #242323 !important;
+     width: 30%;
+}
+@keyframes Shadow_Effect
+{
+     0%,100%
+     {
+          opacity: 1;
+          box-shadow: none;
+          border: 3px solid #ff6100;
+     }
+     50%
+     {
+          opacity: 0.7;
+          box-shadow: 2px 2px 20px #c7703a, inset 2px 2px 20px #c7703a;
+          border: 3px solid #c79272;
+     }
 }
 
 .padding_left0 {
@@ -777,8 +810,6 @@ ul.btn li:last-child {
 .padding_right0 {
      padding-right: 0;
 }
-
-
 /** end product  section **/
 
 
