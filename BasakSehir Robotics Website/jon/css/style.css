@@ -312,7 +312,24 @@ ul.btn li:last-child {
 
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 
-
+/* display Flexibility*/
+.Display_Flex
+{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+/* Letter enlarge */
+.MassiveBlueLetter::first-letter {
+     font-size: 200%; 
+     font-style: italic;
+     color: #0808ff;
+}
+.MassiveOrangeLetter::first-letter {
+     font-size: 200%; 
+     font-style: italic;
+     color: rgb(233, 103, 17);
+}
 /*-- navigation--*/
 
 .navigation.navbar {
@@ -461,11 +478,10 @@ ul.btn li:last-child {
 
 .text-bg h1 {
      text-transform: uppercase;
-     /* BU kısım textin sağdan sola doğru gradient bir geçiş yapmasına sağlıyor */
      background: linear-gradient(to right, #ff6800, #001aff);
      -webkit-text-fill-color: transparent;
      -webkit-background-clip: text; 
-     /*  */
+     
      font-size: 110px;
      line-height: 120px;
      padding-bottom: 15px;
@@ -474,12 +490,9 @@ ul.btn li:last-child {
 
 .text-bg p {
      font-size: 17px;
-     /* BU kısım textin sağdan sola doğru gradient bir geçiş yapmasına sağlıyor */
       background: linear-gradient(to right, #ff6800, #001aff);
      -webkit-text-fill-color: transparent;
-     -webkit-background-clip: text;  
-     
-     /*  */
+     -webkit-background-clip: text; 
      line-height: 28px;
      font-weight: 500;
      padding-bottom: 50px;
@@ -511,12 +524,13 @@ ul.btn li:last-child {
 /** end banner section **/
 
 .titlepage {
-     color: white;
-     text-align: center;
+     
+     text-align: start;
      padding-bottom: 60px;
 }
 
 .titlepage h2 {
+     color: white;
      font-size: 50px;
      line-height: 62px;
      font-weight: bold;
@@ -817,7 +831,7 @@ ul.btn li:last-child {
 
 .about {
      padding: 60px 0px 140px 0px;
-     background: #fff;
+     background: transparent;
 }
 
 .about .titlepage p {
@@ -840,15 +854,16 @@ ul.btn li:last-child {
 
 .test_box {
      padding: 30px 40px 40px 42px;
-     background: url(../images/te.png);
+     background: url(../images/Member_Background.png);
      background-repeat: no-repeat;
      background-size: 100% 100%;
      min-height: 367px;
 }
 
-.about_Carousel .test_box h4 {
+.about_Carousel .test_box h3 {
      font-size: 30px;
-     color: #1d1c1c;
+     color: #ffffff;
+     text-shadow: 1px 1px 20px white;
      line-height: 18px;
      display: block;
      text-align: center;
@@ -858,13 +873,17 @@ ul.btn li:last-child {
      text-align: left;
 }
 
+.about_Carousel .test_box h4{
+     color: white ;
+     text-align: left;
+     text-transform: capitalize;
+     font-weight: 300;
+     margin-top: 15px;
+}
+
 .about_Carousel .test_box i {
      text-align: left;
      float: left;
-     margin-bottom: -12px;
-     margin-right: 20px;
-     margin-top: -91px;
-     box-shadow: #ddd 0px 0px 10px 0px;
      border-radius: 122px;
 }
 
@@ -876,7 +895,36 @@ ul.btn li:last-child {
      padding-left: 100px;
      margin-top: 45px;
 }
-
+.Member_Div
+{
+     position: relative;
+     width: auto;
+     height: auto;
+}
+.Member_Img
+{
+     margin-bottom: -12px;
+     margin-right: 20px;
+     margin-top: -91px;
+     box-shadow: #ddd 0px 0px 10px 0px;
+     border: 1px solid white;
+     border-radius: 30px;
+     width: 200px;
+     height: 200px;
+}
+.Member_Social
+{
+     width: 50px; height: 50px;
+     margin: 10px;
+      box-shadow: 2px 2px 10px black;
+}
+.Member_Social_Li
+{
+     display: flex;
+     justify-content: start;
+     align-items: start;
+     
+}
 .about_Carousel .carousel-indicators {
      bottom: -50px;
 }
@@ -885,11 +933,11 @@ ul.btn li:last-child {
      width: 56px;
      height: 15px;
      border-radius: 20px;
-     background: #f4cb1e;
+     background: #ff6100;
 }
 
 .about_Carousel .carousel-indicators li.active {
-     background: #040403;
+     background: #1100ff;
 }
 
 #myCarousel .carousel-control-next-icon,
@@ -904,7 +952,7 @@ ul.btn li:last-child {
 /** footer **/
 
 .footer {
-     background: #212121;
+     background: #050725;
      padding-top: 85px;
      text-align: center;
 }
@@ -952,8 +1000,9 @@ ul.btn li:last-child {
 .main_form .send_btn {
      font-size: 20px;
      transition: ease-in all 0.5s;
-     background-color: #f4cb1e;
-     color: #000;
+     background-color: transparent;
+     color: #ff6100;
+     border: 1px solid #ff6100;
      padding: 16px 0px;
      max-width: 333px;
      font-weight: 700;
@@ -963,9 +1012,9 @@ ul.btn li:last-child {
 }
 
 .main_form .send_btn:hover {
-     background-color: #fff;
      transition: ease-in all 0.5s;
-     color: #000;
+     background-color: #ff6100;
+     color: #0808ff;
 }
 
 #request *::placeholder {
@@ -982,7 +1031,7 @@ ul.social_icon li {
 }
 
 ul.social_icon li a {
-     background: #fff;
+     background: #1100ff;
      width: 40px;
      height: 40px;
      display: flex;
@@ -994,7 +1043,7 @@ ul.social_icon li a {
 }
 
 ul.social_icon li a:hover {
-     background-color: #f4cb1e;
+     background-color: #080833;
      color: #fff;
 }
 
@@ -1043,7 +1092,7 @@ ul.link {
 }
 
 ul.link li a {
-     color: #fff;
+     color: #ffffff;
      font-size: 17px;
      line-height: 20px;
      padding-bottom: 15px;
@@ -1052,7 +1101,7 @@ ul.link li a {
 }
 
 ul.link li a:hover {
-     color: #f4cb1e;
+     color: #ff7b00;
 }
 
 ul.link li a::after {
@@ -1085,8 +1134,9 @@ ul.link li a::after {
 .sub_btn {
      font-size: 17px;
      transition: ease-in all 0.5s;
-     background-color: #f4cb1e;
-     color: #fff;
+     background-color: transparent;
+     color: #ff6100;
+     border: 1px solid #ff6100;
      padding: 11px 0px;
      max-width: 200px;
      width: 100%;
@@ -1097,15 +1147,16 @@ ul.link li a::after {
 }
 
 .sub_btn:hover {
-     background-color: #fff;
+     
      transition: ease-in all 0.5s;
-     color: #000;
+     background-color: #ff6100;
+     color: #0808ff;
 }
 
 .copyright {
      margin-top: 70px;
      padding: 20px 0px;
-     background-color: #f4cb1e;
+     background-color: #ff6100;
 }
 
 .copyright p {
