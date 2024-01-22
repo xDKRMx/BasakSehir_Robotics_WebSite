@@ -60,3 +60,17 @@ $(function () {
 
 
 });
+
+//Custom Software Codes
+//Refresh Window
+var Refresh_button = document.querySelector(".Refresh_Button");
+
+Refresh_button.addEventListener('click', e => {
+
+	window.location.reload();
+
+});
+
+
+
+
