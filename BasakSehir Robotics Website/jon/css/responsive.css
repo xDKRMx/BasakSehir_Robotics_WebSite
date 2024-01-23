@@ -331,5 +331,14 @@
         background: url(../images/menu_icon.png);
         background-repeat: no-repeat;
     }
+    .Contact_Section
+    {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .Contact_Part
+    {
+        padding: 0;
+    }
 }
 

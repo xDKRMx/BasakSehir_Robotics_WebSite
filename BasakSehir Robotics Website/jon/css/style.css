@@ -39,6 +39,7 @@ html {
 body {
      background: url(../images/Background.jpg) no-repeat no-repeat center center ;
      background-size: 100% 100%;
+     background-attachment: fixed;
      color: #666666;
      font-size: 14px;
      font-family: 'Lato', sans-serif;
@@ -438,23 +439,31 @@ ul.btn li:last-child {
      align-items: center;
      background-color: transparent;
  }
- .Banner_Background_About, 
- .Banner_Background
+ 
+ /* IT STANDS FOR BANNER ON HOMEPAGE */
+.Background_Main
+ {
+     animation: banner_main_opacity 8s ease-in-out 0.01s infinite both, background_Main_anim 16s ease-in-out 0s infinite both;
+ }
+ /* IT STANDS FOR BANNER ON ABOUT PAGE */
+.Background_About
+{
+     animation: banner_main_opacity 8s ease-in-out 0.01s infinite both, background_About_anim 16s ease-in-out 0s infinite both;
+}
+ /* IT STANDS FOR BANNER ON FRC BLOG PAGE */
+ .Background_FrcBlog
+ {
+      animation: banner_main_opacity 8s ease-in-out 0.01s infinite both, background_FrcBlog_anim 16s ease-in-out 0s infinite both;
+ }
+
+.Background_FrcBlog,
+.Background_About,
+ .Background_Main
  {
      position: absolute;
      width: 100%;
      height: 100%;
      z-index:0;
- }
- /* IT STANDS FOR BANNER ON HOMEPAGE */
- .Banner_Background
- {
-     animation: banner_main_opacity 8s ease-in-out 0.01s infinite both, banner_main_background 16s ease-in-out 0s infinite both;
- }
- /* IT STANDS FOR BANNER ON ABOUT PAGE */
- .Banner_Background_About
- {
-     animation: banner_main_opacity 8s ease-in-out 0.01s infinite both, banner_main_background_About 16s ease-in-out 0s infinite both;
  }
  /* Opacity Animation */
  @keyframes banner_main_opacity {
@@ -470,7 +479,7 @@ ul.btn li:last-child {
  }
  
  /* Background Change Animation */
- @keyframes banner_main_background {
+ @keyframes background_Main_anim {
      0%, 100% {
          background: url(../images/frcImages/HeaderImage.jpg) no-repeat center center;
          background-size: 100% 100%;
@@ -482,14 +491,26 @@ ul.btn li:last-child {
      }
  }
   /* Background About Change Animation */
-  @keyframes banner_main_background_About {
+  @keyframes background_About_anim {
      0%, 100% {
          background: url(../images/frcImages/VizyonveMisyonBackground.jpg) no-repeat center center;
          background-size: 100% 100%;
          
      }
      50%{
-         background: url(../images/frcImages/HeaderImage.png) no-repeat center center;
+         background: url(../images/frcImages/HeaderImage.jpg) no-repeat center center;
+         background-size: 100% 100%;
+     }
+ }
+   /* Background FRC Blog Change Animation */
+   @keyframes background_FrcBlog_anim {
+     0%, 100% {
+         background: url(../images/frcImages/FRCTANITIMIMAGE.png) no-repeat center center;
+         background-size: 100% 100%;
+         
+     }
+     50%{
+         background: url(../images/frcImages/FikretYukselVakfıBackground.png) no-repeat center center;
          background-size: 100% 100%;
      }
  }
@@ -531,12 +552,13 @@ ul.btn li:last-child {
      max-width: 230px;
      text-align: center;
      display: inline-block;
-     border-radius: 30px;
+     
      border: rgb(233, 103, 17) solid 4px;
      transition: ease-in all 0.5s;
 }
 
 .text-bg a:hover {
+     border-radius: 20px;
      background-color: #0e1768;
      color: rgb(233, 103, 17);
      transition: ease-in all 0.5s;
@@ -566,13 +588,14 @@ ul.btn li:last-child {
 }
 
 .blu {
-     color: #0808ff;
+     color: #0808ff ;
 }
 
 .read_more {
      font-size: 17px;
-     background-color: #ff6100;
-     color: #fff;
+     border: 1px solid #ff6100;
+     background: transparent;
+     color: white;
      padding: 13px 0px;
      width: 100%;
      max-width: 190px;
@@ -585,8 +608,9 @@ ul.btn li:last-child {
 }
 
 .read_more:hover {
-     background: #fff;
-     color: #000;
+     border-radius: 20px;
+     background-color: #0e1768;
+     color: #ff6100;
      transition: ease-in all 0.5s;
 }
 
@@ -707,6 +731,7 @@ ul.btn li:last-child {
 }
 
 .choose_img {
+     
      background-color: #ff6100;
     padding: 20px;
     margin-left: 30px;
@@ -722,10 +747,12 @@ ul.btn li:last-child {
 .choose_img figure img {
      width: 100%;
      border-radius: 20px;
+     border: 3px solid #0808ff;
+     box-shadow: 5px 5px 20px #0808ff;
 }
 
 .padding_with {
-     max-width: 653px;
+     max-width: 750px;
      float: right;
      width: 100%;
 }
@@ -987,6 +1014,22 @@ ul.btn li:last-child {
 .footer .titlepage h2 {
      color: #fff;
 }
+.footer_Basaksehir
+{
+     height: 10px;
+     width: 100vw;
+     background-color: #ff6100;
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.footer_Basaksehir_Logo
+{
+     position: absolute;
+     width: 150px;
+     height: 150px;
+}
 
 .main_form {
      padding: 50px 0px 50px 0px;
@@ -1021,6 +1064,7 @@ ul.btn li:last-child {
 
 .main_form .send_btn {
      font-size: 20px;
+     
      transition: ease-in all 0.5s;
      background-color: transparent;
      color: #ff6100;
@@ -1034,6 +1078,7 @@ ul.btn li:last-child {
 }
 
 .main_form .send_btn:hover {
+     border-radius: 20px;
      transition: ease-in all 0.5s;
      background-color: #ff6100;
      color: #0808ff;
@@ -1200,7 +1245,7 @@ ul.link li a::after {
 }
 
 .sub_btn:hover {
-     
+     border-radius: 20px;
      transition: ease-in all 0.5s;
      background-color: #ff6100;
      color: #0808ff;
@@ -1246,4 +1291,22 @@ ul.link li a::after {
 {
      width: 100%; 
      height: 100%;
+}
+/* FRC BLOG STYLE */
+.FRC_Columns  
+{
+     display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+}
+.FRC_Blog
+{
+     margin: 10px;
+}
+.FRC_img , .FRC_video
+{
+     border-radius: 20px;
+     border: 2px solid #ff6100;
+     box-shadow: 2px 2px 10px #ff6100;
 }
