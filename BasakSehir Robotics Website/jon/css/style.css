@@ -455,10 +455,15 @@ ul.btn li:last-child {
  {
       animation: banner_main_opacity 8s ease-in-out 0.01s infinite both, background_FrcBlog_anim 16s ease-in-out 0s infinite both;
  }
+ .Background_Projects
+ {
+     animation: banner_main_opacity 8s ease-in-out 0.01s infinite both, background_Projects_anim 16s ease-in-out 0s infinite both;
+ }
 
 .Background_FrcBlog,
 .Background_About,
- .Background_Main
+ .Background_Main,
+ .Background_Projects
  {
      position: absolute;
      width: 100%;
@@ -511,6 +516,18 @@ ul.btn li:last-child {
      }
      50%{
          background: url(../images/frcImages/FikretYukselVakfıBackground.png) no-repeat center center;
+         background-size: 100% 100%;
+     }
+ }
+ /* Background FRC Blog Change Animation */
+ @keyframes background_Projects_anim {
+     0%, 100% {
+         background: url(../images/frcImages/PhysicolizeExample2.png) no-repeat center center;
+         background-size: 100% 100%;
+         
+     }
+     50%{
+         background: url(../images/frcImages/DreamBotExample.png) no-repeat center center;
          background-size: 100% 100%;
      }
  }
