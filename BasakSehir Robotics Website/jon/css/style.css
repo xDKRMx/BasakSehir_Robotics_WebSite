@@ -970,11 +970,14 @@ ul.btn li:last-child {
 }
 .Member_Img
 {
+     box-shadow: #ddd 0px 0px 10px 0px;
+     border: 1px solid white;
+}
+.Company_img , .Member_Img
+{
      margin-bottom: -12px;
      margin-right: 20px;
      margin-top: -91px;
-     box-shadow: #ddd 0px 0px 10px 0px;
-     border: 1px solid white;
      border-radius: 30px;
      width: 200px;
      height: 200px;
@@ -1332,4 +1335,10 @@ ul.link li a::after {
 {
      width : 560px;
      height : 315px;
+}
+.Specilities
+{
+
+     margin-top: 10px;
+     margin-bottom: 10px;
 }
