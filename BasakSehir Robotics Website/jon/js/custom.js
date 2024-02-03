@@ -70,7 +70,24 @@ Refresh_button.addEventListener('click', e => {
 	window.location.reload();
 
 });
+ 
 
+// Location href kısmı 
+var Location_Button = document.querySelector(".Location");
 
+Location_Button.addEventListener('click', () => {
+    // Atölye map
+	window.location.href('');
+});
+
+// Location href kısmı 
+
+var Gmail_Button = document.querySelector(".Gmail");
+
+Gmail_Button.addEventListener('click', () => {
+    // Gmail ana sayfa
+	 console.log("DENEME");
+	 window.location.href('');
+});
 
 

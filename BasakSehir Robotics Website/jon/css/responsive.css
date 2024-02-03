@@ -343,8 +343,8 @@
     }
     .FRC_video
     {
-         width : auto;
-         height : auto;
+         width : 300px;
+         height : 200px;
     }
 }
 
